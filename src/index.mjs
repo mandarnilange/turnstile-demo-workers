@@ -3,7 +3,7 @@ import implicitRenderHtml from './implicit.html';
 
 // This is the demo secret key. In prod, we recommend you store
 // your secret key(s) safely.
-let SECRET_KEY = env.TURNSTILE_SECRET;
+let SECRET_KEY ;
 
 async function handlePost(request) {
     const body = await request.formData();
