@@ -33,7 +33,8 @@ async function handlePost(request) {
 }
 
 export default {
-    async fetch(request) {
+    async fetch(request, env) {
+        SECRET_KEY = env.TURNSTILE_SECRET
         if (request.method === 'POST') {
             return await handlePost(request);
         }
